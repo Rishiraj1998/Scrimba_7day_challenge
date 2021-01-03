@@ -1,0 +1,34 @@
+function addTwoDigits(num)  {
+    //  write code here.
+    var n=num.toString();
+    var x=n.split("");
+    var sum=0;
+    var xx;
+    for(var i=0;i<x.length;i++){
+        xx = parseInt(x[i]);
+        sum = sum + xx;
+    }
+    return sum
+    
+}
+
+
+
+/**
+* Test Suite 
+*/
+describe('addBorder()', () => {
+    it('take a two digit number and return the sum of their numbers', () => {
+       // arrange
+        const num = 29;
+        
+        // act
+        const result = addTwoDigits(num);
+
+        // log
+        console.log("result: ", result);
+        
+        // assert
+        expect(result).toBe(11);
+    });
+});
